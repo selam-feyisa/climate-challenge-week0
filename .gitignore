@@ -1,19 +1,46 @@
-# Python virtual environment
+# =========================
+# Virtual environments
+# =========================
 venv/
 env/
 .venv/
 
+# =========================
 # Python cache
+# =========================
 __pycache__/
 *.pyc
 
-# Jupyter Notebook checkpoints
+# =========================
+# Jupyter Notebook
+# =========================
 .ipynb_checkpoints/
 
-# Data files (only if you don't want to push raw data)
-data/
-*.csv
-
+# =========================
 # OS files
+# =========================
 .DS_Store
 Thumbs.db
+
+# =========================
+# Data (safer approach)
+# =========================
+data/raw/
+data/processed/
+
+# Keep important CSVs tracked unless sensitive
+# *.csv  ❌ (avoid this unless necessary)
+
+# =========================
+# Models (VERY important for ML)
+# =========================
+models/
+*.pkl
+*.joblib
+*.h5
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
