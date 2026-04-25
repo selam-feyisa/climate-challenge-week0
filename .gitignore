@@ -23,10 +23,9 @@ __pycache__/
 Thumbs.db
 
 # =========================
-# Data (safer approach)
+# Data (DO NOT TRACK)
 # =========================
-data/raw/
-data/processed/
+data/
 
 # Keep important CSVs tracked unless sensitive
 # *.csv  ❌ (avoid this unless necessary)
