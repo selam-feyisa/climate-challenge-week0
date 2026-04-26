@@ -1,5 +1,45 @@
+# =========================
+# Virtual environments
+# =========================
 venv/
+env/
+.venv/
+
+# =========================
+# Python cache
+# =========================
 __pycache__/
+*.pyc
+
+# =========================
+# Jupyter Notebook
+# =========================
 .ipynb_checkpoints/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Data (DO NOT TRACK)
+# =========================
 data/
-*.csv
+
+# Keep important CSVs tracked unless sensitive
+# *.csv  ❌ (avoid this unless necessary)
+
+# =========================
+# Models (VERY important for ML)
+# =========================
+models/
+*.pkl
+*.joblib
+*.h5
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
