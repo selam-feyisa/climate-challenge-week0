@@ -1,27 +1,13 @@
 import pandas as pd
 
-def load_data():
+def load_all_data():
     countries = ["ethiopia", "kenya", "tanzania", "nigeria", "sudan"]
-
     dfs = []
 
-    for c in countries:
-        df = pd.read_csv(f"data/{c}.csv")
-        df["Country"] = c.capitalize()
+    for country in countries:
+        path = f"data/{country}.csv"
+        df = pd.read_csv(path)
+        df["Country"] = country.capitalize()
         dfs.append(df)
 
-    data = pd.concat(dfs, ignore_index=True)
-
-    # clean missing values
-    data = data.replace(-999, pd.NA)
-
-    # create datetime
-    data["DATE"] = pd.to_datetime(
-        data["YEAR"] * 1000 + data["DOY"],
-        format="%Y%j"
-    )
-
-    data["Year"] = data["DATE"].dt.year
-    data["Month"] = data["DATE"].dt.month
-
-    return data
+    return pd.concat(dfs, ignore_index=True)
